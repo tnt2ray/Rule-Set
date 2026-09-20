@@ -16,7 +16,7 @@ const ARCHIVE_URL = `https://github.com/SagerNet/sing-box/releases/download/v${S
 const SOURCE_LIMIT = 16 * 1024 * 1024;
 const SRS_LIMIT = 24 * 1024 * 1024;
 const RESPONSE_LIMIT = 64 * 1024;
-const DEADLINE = Date.now() + 11 * 60 * 1000;
+const DEADLINE = Date.now() + 55 * 60 * 1000;
 const BUCKETS = new Set(["combined", "domain", "ipcidr", "dns"]);
 
 class SafeError extends Error {}
@@ -117,7 +117,7 @@ function readConfiguration() {
   const outputKey = process.env.SUBPILOT_SRS_OUTPUT_KEY ?? "";
   const repository = process.env.GITHUB_REPOSITORY ?? "";
   const token = process.env.GITHUB_TOKEN ?? "";
-  if (!/^[a-f0-9]{64}$/.test(outputKey) || !/^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/.test(repository) || !/^[\x21-\x7e]+$/.test(token)) {
+  if (!(outputKey === "batch" || /^[a-f0-9]{64}$/.test(outputKey)) || !/^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/.test(repository) || !/^[\x21-\x7e]+$/.test(token)) {
     throw new SafeError("The output key, GitHub repository or workflow token is missing or invalid.");
   }
   return { origin: url.origin, secret, jobId, outputKey, repository, token };
@@ -271,8 +271,7 @@ async function publishArtifacts(settings, manifest, artifacts, workerRequest) {
   throw new SafeError("Publication could not advance the output branch; check branch protection or retry.");
 }
 
-async function main() {
-  const settings = readConfiguration();
+async function compileOutput(settings, directory, getCompiler) {
   const jobUrl = `${settings.origin}/api/internal/singbox-srs/jobs/${settings.jobId}`;
   const workerRequest = (suffix, method, limit, label, body) => request(`${jobUrl}${suffix}`, {
     method, redirect: "error",
@@ -284,38 +283,91 @@ async function main() {
   }, limit, label);
   process.stdout.write("Stage: downloading task manifest from SubPilot.\n");
   const manifest = readManifest(await workerRequest("", "GET", RESPONSE_LIMIT, "Manifest download"), settings);
-  const directory = await mkdtemp(join(tmpdir(), "subpilot-srs-"));
-  try {
-    process.stdout.write("Stage: downloading and verifying sing-box compiler.\n");
-    const compiler = await installCompiler(directory);
-    const artifacts = [];
-    for (const { bucket } of manifest.artifacts) {
-      process.stdout.write(`Stage: downloading and compiling ${bucket}.\n`);
-      const source = await workerRequest(`/${bucket}.json`, "GET", SOURCE_LIMIT, "Rule source download");
-      const sourcePath = join(directory, `${bucket}.json`);
-      const outputPath = join(directory, `${bucket}.srs`);
-      await writeFile(sourcePath, source, { mode: 0o600 });
-      runCommand(compiler, ["rule-set", "compile", "--output", outputPath, sourcePath], "Rule set compilation");
-      const outputInfo = await stat(outputPath);
-      if (!outputInfo.isFile() || outputInfo.size < 8 || outputInfo.size > SRS_LIMIT) {
-        throw new SafeError("The compiled rule set is empty or exceeds the publication size limit.");
+  // Reuse published outputs when only the Worker receipt confirmation failed.
+  const existingHead = await githubApi(settings, `/git/ref/heads/${encodeURIComponent(manifest.outputBranch)}`, "GET", undefined, [404]);
+  if (existingHead.status !== 404) {
+    const commit = existingHead.data?.object?.sha;
+    if (typeof commit === "string" && /^[a-f0-9]{40}$/.test(commit)) {
+      const existing = await githubApi(settings, `/contents/${manifest.manifestPath}?ref=${commit}`, "GET", undefined, [404]);
+      if (existing.status !== 404 && existing.data?.encoding === "base64" && typeof existing.data.content === "string") {
+        let receipt;
+        try { receipt = JSON.parse(Buffer.from(existing.data.content, "base64").toString("utf8")); } catch { /* Invalid receipts need rebuilding. */ }
+        if (receipt?.jobId === settings.jobId && Array.isArray(receipt.artifacts)
+          && receipt.artifacts.length === manifest.artifacts.length
+          && manifest.artifacts.every((artifact) => receipt.artifacts.some((item) => item.bucket === artifact.bucket && item.path === artifact.path && /^[a-f0-9]{64}$/.test(item.sha256)))) {
+          process.stdout.write("Published output matches current job; retrying confirmation without recompilation.\n");
+          await workerRequest("/complete", "POST", RESPONSE_LIMIT, "Publication confirmation", JSON.stringify({ commit }));
+          return;
+        }
       }
-      const binary = await readFile(outputPath);
-      if (binary.subarray(0, 3).toString("ascii") !== "SRS" || binary[3] < 1 || binary[3] > 5) {
-        throw new SafeError("The compiler did not produce a valid SRS file.");
-      }
-      artifacts.push({ bucket, binary });
-      await Promise.all([rm(sourcePath), rm(outputPath)]);
-      process.stdout.write(`Compiled ${bucket}.\n`);
     }
-    process.stdout.write("Stage: publishing compiled artifacts to GitHub.\n");
-    const commit = await publishArtifacts(settings, manifest, artifacts, workerRequest);
-    process.stdout.write("Stage: confirming publication with SubPilot.\n");
-    await workerRequest("/complete", "POST", RESPONSE_LIMIT, "Publication confirmation", JSON.stringify({ commit }));
-    process.stdout.write("All compiled rule sets have been published to the repository.\n");
-  } finally {
-    await rm(directory, { recursive: true, force: true });
   }
+  const compiler = await getCompiler();
+  const artifacts = [];
+  for (const { bucket } of manifest.artifacts) {
+    process.stdout.write(`Stage: downloading and compiling ${bucket}.\n`);
+    const source = await workerRequest(`/${bucket}.json`, "GET", SOURCE_LIMIT, "Rule source download");
+    const sourcePath = join(directory, `${bucket}.json`);
+    const outputPath = join(directory, `${bucket}.srs`);
+    await writeFile(sourcePath, source, { mode: 0o600 });
+    runCommand(compiler, ["rule-set", "compile", "--output", outputPath, sourcePath], "Rule set compilation");
+    const outputInfo = await stat(outputPath);
+    if (!outputInfo.isFile() || outputInfo.size < 8 || outputInfo.size > SRS_LIMIT) {
+      throw new SafeError("The compiled rule set is empty or exceeds the publication size limit.");
+    }
+    const binary = await readFile(outputPath);
+    if (binary.subarray(0, 3).toString("ascii") !== "SRS" || binary[3] < 1 || binary[3] > 5) {
+      throw new SafeError("The compiler did not produce a valid SRS file.");
+    }
+    artifacts.push({ bucket, binary });
+    await Promise.all([rm(sourcePath), rm(outputPath)]);
+    process.stdout.write(`Compiled ${bucket}.\n`);
+  }
+  process.stdout.write("Stage: publishing compiled artifacts to GitHub.\n");
+  const commit = await publishArtifacts(settings, manifest, artifacts, workerRequest);
+  process.stdout.write("Stage: confirming publication with SubPilot.\n");
+  await workerRequest("/complete", "POST", RESPONSE_LIMIT, "Publication confirmation", JSON.stringify({ commit }));
+  process.stdout.write("All compiled rule sets have been published to the repository.\n");
+}
+
+async function main() {
+  const settings = readConfiguration();
+  const directory = await mkdtemp(join(tmpdir(), "subpilot-srs-"));
+  let compiler;
+  const getCompiler = async () => {
+    if (!compiler) {
+      process.stdout.write("Stage: downloading and verifying sing-box compiler.\n");
+      compiler = await installCompiler(directory);
+    }
+    return compiler;
+  };
+  try {
+    if (settings.outputKey !== "batch") return await compileOutput(settings, directory, getCompiler);
+    let offset = 0, failed = 0, completed = 0, skipped = 0, pending = 0;
+    do {
+      const bytes = await request(`${settings.origin}/api/internal/singbox-srs/batch?integration=${settings.jobId}&offset=${offset}`, {
+        method: "GET", redirect: "error", headers: { Authorization: `Bearer ${settings.secret}` }
+      }, RESPONSE_LIMIT, "Batch manifest download");
+      const batch = JSON.parse(bytes.toString("utf8"));
+      if (!Array.isArray(batch.jobs) || batch.jobs.length > 5 || !Number.isSafeInteger(batch.complete) || batch.complete < 0
+        || !Number.isSafeInteger(batch.pending) || batch.pending < 0
+        || (batch.nextOffset !== null && (!Number.isSafeInteger(batch.nextOffset) || batch.nextOffset <= offset))) throw new SafeError("Invalid batch manifest.");
+      skipped += batch.complete; pending += batch.pending;
+      for (const job of batch.jobs) {
+        if (!/^[a-f0-9]{64}$/.test(job.jobId) || !/^[a-f0-9]{64}$/.test(job.outputKey)) throw new SafeError("Invalid batch job.");
+        try {
+          await compileOutput({ ...settings, jobId: job.jobId, outputKey: job.outputKey }, directory, getCompiler);
+          completed++;
+        } catch (error) {
+          failed++;
+          process.stderr.write(`${error instanceof SafeError ? error.message : "Rule-set processing failed."}\n`);
+        }
+      }
+      offset = batch.nextOffset;
+    } while (offset !== null);
+    process.stdout.write(`Batch summary: ${completed} completed, ${skipped} already current, ${pending} awaiting source preparation, ${failed} failed.\n`);
+    if (failed) throw new SafeError("Batch finished with failed rule sets; see errors above. Successful outputs will be skipped on retry.");
+  } finally { await rm(directory, { recursive: true, force: true }); }
 }
 
 try {
