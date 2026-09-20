@@ -4,11 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       job_id:
-        description: SubPilot batch integration ID (or legacy job ID)
-        required: true
-        type: string
-      output_key:
-        description: batch (all pending rule sets) or legacy output key
+        description: SubPilot batch integration ID
         required: true
         type: string
 
@@ -39,6 +35,5 @@ jobs:
           SUBPILOT_URL: ${{ secrets.SUBPILOT_URL }}
           SUBPILOT_SRS_SECRET: ${{ secrets.SUBPILOT_SRS_SECRET }}
           SUBPILOT_SRS_JOB_ID: ${{ inputs.job_id }}
-          SUBPILOT_SRS_OUTPUT_KEY: ${{ inputs.output_key }}
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/compile-singbox-srs.mjs
