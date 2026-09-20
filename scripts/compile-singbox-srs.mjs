@@ -68,14 +68,20 @@ async function request(url, options, limit, label, attempts = 8) {
       if (Number.isFinite(retryAfter) && retryAfter > 0) {
         retryDelay = Math.max(retryDelay, Math.min(retryAfter, 30) * 1000);
       }
-      await response.body?.cancel();
+      let detail = "";
+      if (label === "Publication confirmation" && status === 503) {
+        try {
+          const data = JSON.parse((await readLimited(response, RESPONSE_LIMIT)).toString("utf8"));
+          if (["receipt_unavailable", "receipt_mismatch", "receipt_invalid", "job_changed", "job_not_visible"].includes(data.code)) detail = `; ${data.code}`;
+        } catch { /* Never expose arbitrary response bodies. */ }
+      } else await response.body?.cancel();
       // KV may not be visible to this runner's region immediately. A conflict
       // means the job is stale, however, and must never be published.
       if (![404, 429].includes(status) && status < 500) {
         throw new SafeError(`${label} failed (HTTP ${status}).`);
       }
       if (attempt === attempts - 1) {
-        throw new SafeError(`${label} failed after retries (HTTP ${status}).`);
+        throw new SafeError(`${label} failed after retries (HTTP ${status}${detail}).`);
       }
     } catch (error) {
       if (error instanceof SafeError) throw error;
@@ -276,12 +282,15 @@ async function main() {
     },
     body
   }, limit, label);
+  process.stdout.write("Stage: downloading task manifest from SubPilot.\n");
   const manifest = readManifest(await workerRequest("", "GET", RESPONSE_LIMIT, "Manifest download"), settings);
   const directory = await mkdtemp(join(tmpdir(), "subpilot-srs-"));
   try {
+    process.stdout.write("Stage: downloading and verifying sing-box compiler.\n");
     const compiler = await installCompiler(directory);
     const artifacts = [];
     for (const { bucket } of manifest.artifacts) {
+      process.stdout.write(`Stage: downloading and compiling ${bucket}.\n`);
       const source = await workerRequest(`/${bucket}.json`, "GET", SOURCE_LIMIT, "Rule source download");
       const sourcePath = join(directory, `${bucket}.json`);
       const outputPath = join(directory, `${bucket}.srs`);
@@ -299,7 +308,9 @@ async function main() {
       await Promise.all([rm(sourcePath), rm(outputPath)]);
       process.stdout.write(`Compiled ${bucket}.\n`);
     }
+    process.stdout.write("Stage: publishing compiled artifacts to GitHub.\n");
     const commit = await publishArtifacts(settings, manifest, artifacts, workerRequest);
+    process.stdout.write("Stage: confirming publication with SubPilot.\n");
     await workerRequest("/complete", "POST", RESPONSE_LIMIT, "Publication confirmation", JSON.stringify({ commit }));
     process.stdout.write("All compiled rule sets have been published to the repository.\n");
   } finally {
