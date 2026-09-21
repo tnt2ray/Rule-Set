@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "8a17d19c959c5f228a4b41f9c3504f585a7da04f579136805201ace2ca35f4ed",
+  "jobId": "4588fea6b47bce4ca9a7bdfd89a563f4073a517c2921753b4135be7b68980578",
   "target": "sing-box",
   "outputName": "DingTalk",
   "manifest": {
     "outputFingerprint": "1087f26690fc125b23fac58b4e2774ada70f02e6d0628972f42997bc2fb3abd2",
-    "updatedAt": "2026-09-21T02:56:58.404Z",
+    "updatedAt": "2026-09-21T03:00:27.001Z",
     "ruleCount": 11,
     "duplicateCount": 0,
     "buckets": [
