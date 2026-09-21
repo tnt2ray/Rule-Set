@@ -1,0 +1,49 @@
+{
+  "protocol": "1",
+  "jobId": "b5661b63612236975e45d39488b9f37538eb43ba07258eb370814e86a0ae8d47",
+  "target": "sing-box",
+  "outputName": "Steam",
+  "manifest": {
+    "outputFingerprint": "c31cec611af2604f42888a33e39085cb9fb1f6bb0586e74ee11ab92a2e270250",
+    "updatedAt": "2026-09-21T02:57:29.208Z",
+    "ruleCount": 54,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 51,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 51
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 3,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 3
+        }
+      }
+    ],
+    "sourceContentFingerprint": "fe530d96adec8f8a4e4804a562db942bd894ccc929cd8faf3e6f6fe925d84d5c",
+    "warningCount": 0,
+    "dnsRuleCount": 54
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Steam/routing.srs",
+      "sha256": "4914997e877545193dd298026179b9607c12da0c69edad54adab023067e0e5a8"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Steam/dns-domains.srs",
+      "sha256": "4914997e877545193dd298026179b9607c12da0c69edad54adab023067e0e5a8"
+    }
+  ]
+}
