@@ -1,0 +1,33 @@
+{
+  "protocol": "1",
+  "jobId": "96e5d7abda737153475ac8c63a8aa38d10acfa9809924fd20344fce9d0845741",
+  "target": "sing-box",
+  "outputName": "Advertising_Domain",
+  "manifest": {
+    "outputFingerprint": "f5fb313c58ff7a420a1e80b1d1f74a5f72fb635eb11acf81372459edcc23d363",
+    "updatedAt": "2026-09-21T02:56:48.292Z",
+    "ruleCount": 283435,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 283435,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 283435
+        }
+      }
+    ],
+    "sourceContentFingerprint": "21019b61a9c6e7b7e0a46ffed342044f3b251cdbc6cd030fd6e9435936e96002",
+    "warningCount": 0
+  },
+  "artifacts": [
+    {
+      "bucket": "domain",
+      "path": "Sing-Box/Advertising_Domain/domains.srs",
+      "sha256": "e5e21f74b581ee5273a10970266b9d1be68aa9ba9e114d26b9f9efdf5f1b1cf6"
+    }
+  ]
+}
