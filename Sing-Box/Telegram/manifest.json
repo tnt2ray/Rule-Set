@@ -1,0 +1,60 @@
+{
+  "protocol": "1",
+  "jobId": "a16d1808d943a5b97a3f076aa3d8bba965b3d9b92ea662d08812d66eeff061f3",
+  "target": "sing-box",
+  "outputName": "Telegram",
+  "manifest": {
+    "outputFingerprint": "d8340094ff464b343e7deea0f58ae659670d87ebede0ebc428520155ebedef39",
+    "updatedAt": "2026-09-21T02:57:19.370Z",
+    "ruleCount": 81,
+    "duplicateCount": 2,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 24,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 24
+        }
+      },
+      {
+        "bucket": "ipcidr",
+        "count": 50,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 50
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 7,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 7
+        }
+      }
+    ],
+    "sourceContentFingerprint": "937bab758e416ff8b694910aaa067b40fdc0cd0ef8a0a336655cc04bf018d758",
+    "warningCount": 0,
+    "dnsRuleCount": 25,
+    "asnExpiresAt": 1790045838884
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Telegram/routing.srs",
+      "sha256": "f21124e918119e30683c49f8bd6db94859aeb15640b8c449a08c0e5e7453c4c9"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Telegram/dns-domains.srs",
+      "sha256": "7ab3677664fa9bc2495078bca38078f36349e209a03c9a9dc0f99cf9579025b9"
+    }
+  ]
+}
