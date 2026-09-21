@@ -1,0 +1,39 @@
+{
+  "protocol": "1",
+  "jobId": "8a17d19c959c5f228a4b41f9c3504f585a7da04f579136805201ace2ca35f4ed",
+  "target": "sing-box",
+  "outputName": "DingTalk",
+  "manifest": {
+    "outputFingerprint": "1087f26690fc125b23fac58b4e2774ada70f02e6d0628972f42997bc2fb3abd2",
+    "updatedAt": "2026-09-21T02:56:58.404Z",
+    "ruleCount": 11,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 11,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 11
+        }
+      }
+    ],
+    "sourceContentFingerprint": "fc0fe8dad0737867666e4adf2c1f363aa0ae7f51472685984b9e245411fdc42b",
+    "warningCount": 0,
+    "dnsRuleCount": 11
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/DingTalk/routing.srs",
+      "sha256": "d734f19a33d30f49b65b71b011f5602a6adb21fa639f5add8ec3bf34f36e13d1"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/DingTalk/dns-domains.srs",
+      "sha256": "d734f19a33d30f49b65b71b011f5602a6adb21fa639f5add8ec3bf34f36e13d1"
+    }
+  ]
+}
