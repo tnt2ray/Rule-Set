@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "c955b0f21910587845a8ca3797e86d8808e29e3d56b3451877562914ad3d3a75",
+  "jobId": "960840717cbf29667da56b17659fe4cffc6f08899e689ccb86af56d72cbed55c",
   "target": "sing-box",
   "outputName": "Scholar",
   "manifest": {
     "outputFingerprint": "8a0f8c4d82e63adc076576c64544a3ddf5f87eefdee81f168db0a331bbd71819",
-    "updatedAt": "2026-09-21T02:57:15.009Z",
+    "updatedAt": "2026-09-21T03:00:50.032Z",
     "ruleCount": 231,
     "duplicateCount": 0,
     "buckets": [
