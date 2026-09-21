@@ -1,0 +1,39 @@
+{
+  "protocol": "1",
+  "jobId": "8aec25b1cc08503559bb8d5c16f7f77c24d5c2d21f9fbec7a0ba16a276be6581",
+  "target": "sing-box",
+  "outputName": "Npmjs",
+  "manifest": {
+    "outputFingerprint": "c51c35fc55d017950ab9add9d503f65a53c29c492d386773f79162e354502fe9",
+    "updatedAt": "2026-09-21T02:57:32.336Z",
+    "ruleCount": 3,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 3,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 3
+        }
+      }
+    ],
+    "sourceContentFingerprint": "7b7d25c32dea82545beeb91ac43a441ba075ded5d1043266c8f1c91f6591d4a0",
+    "warningCount": 0,
+    "dnsRuleCount": 3
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Npmjs/routing.srs",
+      "sha256": "1d4f9228d3a0af89a5ddcfedad52cc059efc61cffa4fccb70d78df88e1553c3c"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Npmjs/dns-domains.srs",
+      "sha256": "1d4f9228d3a0af89a5ddcfedad52cc059efc61cffa4fccb70d78df88e1553c3c"
+    }
+  ]
+}
