@@ -1,0 +1,39 @@
+{
+  "protocol": "1",
+  "jobId": "c955b0f21910587845a8ca3797e86d8808e29e3d56b3451877562914ad3d3a75",
+  "target": "sing-box",
+  "outputName": "Scholar",
+  "manifest": {
+    "outputFingerprint": "8a0f8c4d82e63adc076576c64544a3ddf5f87eefdee81f168db0a331bbd71819",
+    "updatedAt": "2026-09-21T02:57:15.009Z",
+    "ruleCount": 231,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 231,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 231
+        }
+      }
+    ],
+    "sourceContentFingerprint": "599492421c81a7d0de537ce7f4de8adf09c27628a09f8aa8b1fdce056efe23f6",
+    "warningCount": 0,
+    "dnsRuleCount": 231
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Scholar/routing.srs",
+      "sha256": "6c8a1fa09b28b55aeb8187b248c33e97e2582e858f934507589db49afe7c1461"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Scholar/dns-domains.srs",
+      "sha256": "6c8a1fa09b28b55aeb8187b248c33e97e2582e858f934507589db49afe7c1461"
+    }
+  ]
+}
