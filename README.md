@@ -1,2 +1,1 @@
-# SRS
-Sing-Box‘s SRS
+# Rule-Set
