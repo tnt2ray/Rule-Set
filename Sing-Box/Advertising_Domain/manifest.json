@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "96e5d7abda737153475ac8c63a8aa38d10acfa9809924fd20344fce9d0845741",
+  "jobId": "35902c766b1e0e5539a849f7faccff24149203560ad46d4c5d5afa73c396ac56",
   "target": "sing-box",
   "outputName": "Advertising_Domain",
   "manifest": {
     "outputFingerprint": "f5fb313c58ff7a420a1e80b1d1f74a5f72fb635eb11acf81372459edcc23d363",
-    "updatedAt": "2026-09-21T02:56:48.292Z",
+    "updatedAt": "2026-09-21T03:00:17.202Z",
     "ruleCount": 283435,
     "duplicateCount": 0,
     "buckets": [
