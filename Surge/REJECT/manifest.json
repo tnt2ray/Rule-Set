@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "59072540833ca2149bfae7b1effdb0adee917b21bb70c8ebe565b9230a324426",
+  "jobId": "4fa3d74f82486f181ee95c5b109d39d1429239fc75d757fcd5a5612504ee7453",
   "target": "surge",
   "outputName": "REJECT",
   "manifest": {
     "outputFingerprint": "b1437dd1d72d94e9e60de09c4ef03ad4ae6d9ee9d3bb76096df936d9d6cea778",
-    "updatedAt": "2026-09-21T02:56:30.891Z",
+    "updatedAt": "2026-09-21T02:59:56.145Z",
     "ruleCount": 782,
     "duplicateCount": 0,
     "buckets": [
