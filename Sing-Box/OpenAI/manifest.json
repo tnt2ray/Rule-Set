@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "bbaabda52fffda3b6e12e7ec7a26d2fc04d5abff978af19c768b62b65dbab760",
+  "jobId": "81551b74352f78e991bed30daa51e00c2f2c2a23fa6a3280676d5840cae9b10d",
   "target": "sing-box",
   "outputName": "OpenAI",
   "manifest": {
     "outputFingerprint": "400f8d3abc8ddd32a9450b6a459c8bc9bb7a0f1a43780a2b100c894a73d0b3fc",
-    "updatedAt": "2026-09-21T02:57:02.206Z",
+    "updatedAt": "2026-09-21T03:00:32.602Z",
     "ruleCount": 2339,
     "duplicateCount": 2,
     "buckets": [
@@ -43,7 +43,7 @@
     "sourceContentFingerprint": "9098a956560d649a75bfb04b87fb9e406c5f50dac62b18071398dd06aa807c80",
     "warningCount": 0,
     "dnsRuleCount": 49,
-    "asnExpiresAt": 1790045822118
+    "asnExpiresAt": 1790046032547
   },
   "artifacts": [
     {
