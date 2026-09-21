@@ -1,0 +1,59 @@
+{
+  "protocol": "1",
+  "jobId": "111d45d000f90f98e0709e92033ace01fce655db71b242bcf999ea9aa4f6b97a",
+  "target": "sing-box",
+  "outputName": "Twitter",
+  "manifest": {
+    "outputFingerprint": "b5278215466b498debb02e74f57799b715b4198888482c027855cf0f438187a7",
+    "updatedAt": "2026-09-21T02:57:08.788Z",
+    "ruleCount": 33,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 26,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 26
+        }
+      },
+      {
+        "bucket": "ipcidr",
+        "count": 6,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 6
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 1,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 1
+        }
+      }
+    ],
+    "sourceContentFingerprint": "95b5ab5c0ddfa5defe5a04df34ed7424927525d8f8ea6af6d08de632c0509964",
+    "warningCount": 0,
+    "dnsRuleCount": 27
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Twitter/routing.srs",
+      "sha256": "79d487b66ef8c79198e7002a1e08753df4aea85fa23ee1c744d1b0478e388e2e"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Twitter/dns-domains.srs",
+      "sha256": "b9984eb6054423d92c12ae9c00a0337b7e674230c662203ab2b2416d3e08d121"
+    }
+  ]
+}
