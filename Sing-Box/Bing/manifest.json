@@ -1,0 +1,39 @@
+{
+  "protocol": "1",
+  "jobId": "c3fe63ac6810cd2900a654c40d7fad6e3e0b6b962661eef6ab4b8bc59bcaf048",
+  "target": "sing-box",
+  "outputName": "Bing",
+  "manifest": {
+    "outputFingerprint": "529496521086f8fc50dcf136fee6665c0d48ae21cfc486aa447b4f7708b11f72",
+    "updatedAt": "2026-09-21T02:57:11.866Z",
+    "ruleCount": 9,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 9,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 9
+        }
+      }
+    ],
+    "sourceContentFingerprint": "c8c23d9195890332f49ad6ebbf85f728aa4f602701c1eb5a8abb934974f12e90",
+    "warningCount": 0,
+    "dnsRuleCount": 9
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Bing/routing.srs",
+      "sha256": "e0c1e8dd95a28e7e18b61540e9c6e0799f2ad5e4f90d248b604dc9da05d96cfc"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Bing/dns-domains.srs",
+      "sha256": "e0c1e8dd95a28e7e18b61540e9c6e0799f2ad5e4f90d248b604dc9da05d96cfc"
+    }
+  ]
+}
