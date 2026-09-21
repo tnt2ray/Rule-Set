@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "0f79ce8b4f4d69e09bd693ad1810ce44736e2ba67c092f3784535ad5bef58e82",
+  "jobId": "4ee528da4ecd0f861232483d24257fe8a43c6101753f4c86d4b98e37bc5ef6ed",
   "target": "sing-box",
   "outputName": "SteamCN",
   "manifest": {
     "outputFingerprint": "c1f6c31fedfa271fa900396531bbb34796f2f12a3375df7b0448135cb6d2701d",
-    "updatedAt": "2026-09-21T02:57:26.049Z",
+    "updatedAt": "2026-09-21T03:01:08.309Z",
     "ruleCount": 17,
     "duplicateCount": 0,
     "buckets": [
