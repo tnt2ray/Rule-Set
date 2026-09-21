@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "1af5f20bead4102ed4586e809e914c4e8cc75bd773bb44b3058502c5cef8e239",
+  "jobId": "2c966cd8ee0786cd5aaa5c953838b639e4f0a1154032d81d7b1701604011f1cc",
   "target": "sing-box",
   "outputName": "Npmjs",
   "manifest": {
     "outputFingerprint": "c51c35fc55d017950ab9add9d503f65a53c29c492d386773f79162e354502fe9",
-    "updatedAt": "2026-09-21T03:01:16.975Z",
+    "updatedAt": "2026-09-21T05:04:36.941Z",
     "ruleCount": 3,
     "duplicateCount": 0,
     "buckets": [
