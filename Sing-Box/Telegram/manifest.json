@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "a16d1808d943a5b97a3f076aa3d8bba965b3d9b92ea662d08812d66eeff061f3",
+  "jobId": "961158f7d5630629114a51ccba891ac4ce3bf2a3fcf41783f078d36037e96775",
   "target": "sing-box",
   "outputName": "Telegram",
   "manifest": {
     "outputFingerprint": "d8340094ff464b343e7deea0f58ae659670d87ebede0ebc428520155ebedef39",
-    "updatedAt": "2026-09-21T02:57:19.370Z",
+    "updatedAt": "2026-09-21T05:04:21.608Z",
     "ruleCount": 81,
     "duplicateCount": 2,
     "buckets": [
@@ -43,7 +43,7 @@
     "sourceContentFingerprint": "937bab758e416ff8b694910aaa067b40fdc0cd0ef8a0a336655cc04bf018d758",
     "warningCount": 0,
     "dnsRuleCount": 25,
-    "asnExpiresAt": 1790045838884
+    "asnExpiresAt": 1790053461113
   },
   "artifacts": [
     {
