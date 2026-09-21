@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "5b7baa06e2929df1efd7e44db1f3c7d33381b92440a6c3863134e9548736d766",
+  "jobId": "6ffd8491af2330acda783cf49b8dc10668df4a849b7cc93aaed34472014a9814",
   "target": "sing-box",
   "outputName": "Advertising",
   "manifest": {
     "outputFingerprint": "dc00d1afe00c9107ca07d6271a1938b4e736a677c1d6b8725b5ac69117b61bff",
-    "updatedAt": "2026-09-21T03:00:06.271Z",
+    "updatedAt": "2026-09-21T05:03:38.814Z",
     "ruleCount": 767,
     "duplicateCount": 0,
     "buckets": [
