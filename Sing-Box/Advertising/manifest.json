@@ -1,0 +1,43 @@
+{
+  "protocol": "1",
+  "jobId": "fc36d02c19f674b90163b94e54db6ccddd8b3119f1d284cb6407082ba93bc0a9",
+  "target": "sing-box",
+  "outputName": "Advertising",
+  "manifest": {
+    "outputFingerprint": "dc00d1afe00c9107ca07d6271a1938b4e736a677c1d6b8725b5ac69117b61bff",
+    "updatedAt": "2026-09-21T02:56:37.804Z",
+    "ruleCount": 767,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "ipcidr",
+        "count": 489,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 489
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 278,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 278
+        }
+      }
+    ],
+    "sourceContentFingerprint": "01362fc0f0dd4aaccb74ad25eeb6a2c190882f6c5b087578b7d7b78b2f0f9ebf",
+    "warningCount": 0
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Advertising/routing.srs",
+      "sha256": "e4447d4de0eec77bb693b745922772dc54bad1b6729cf74174f1f653ea98ad4d"
+    }
+  ]
+}
