@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "dc637c3e78fe4c790b15cf22f04501b1d11e9198a26370ad81259b3e11ea002b",
+  "jobId": "92e082256034a14dfa45823d78fdd4cd8ad4b7887dd556a9f6d902af63fb2c85",
   "target": "sing-box",
   "outputName": "GitHub",
   "manifest": {
     "outputFingerprint": "0e6924554ac7641e0a4eb7cf3a6994c6b18415d6a7c18ec6f8263c3a247a619f",
-    "updatedAt": "2026-09-21T02:57:22.929Z",
+    "updatedAt": "2026-09-21T03:01:04.023Z",
     "ruleCount": 31,
     "duplicateCount": 0,
     "buckets": [
