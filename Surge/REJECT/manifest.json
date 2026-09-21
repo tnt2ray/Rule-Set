@@ -1,0 +1,33 @@
+{
+  "protocol": "1",
+  "jobId": "59072540833ca2149bfae7b1effdb0adee917b21bb70c8ebe565b9230a324426",
+  "target": "surge",
+  "outputName": "REJECT",
+  "manifest": {
+    "outputFingerprint": "b1437dd1d72d94e9e60de09c4ef03ad4ae6d9ee9d3bb76096df936d9d6cea778",
+    "updatedAt": "2026-09-21T02:56:30.891Z",
+    "ruleCount": 782,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "classical",
+        "count": 782,
+        "targets": [
+          "surge"
+        ],
+        "targetCounts": {
+          "surge": 782
+        }
+      }
+    ],
+    "sourceContentFingerprint": "db2f3125de7ed312b2e212d8f238b3f13377f4af80b5cecb050b46ed6f3eee7e",
+    "warningCount": 0
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Surge/REJECT/routing.list",
+      "sha256": "41c023ccbeb258510408d2453f4f71ea24f828dd8882b25c9d39f6676558766b"
+    }
+  ]
+}
