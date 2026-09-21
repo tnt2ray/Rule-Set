@@ -1,0 +1,65 @@
+{
+  "protocol": "1",
+  "jobId": "bbaabda52fffda3b6e12e7ec7a26d2fc04d5abff978af19c768b62b65dbab760",
+  "target": "sing-box",
+  "outputName": "OpenAI",
+  "manifest": {
+    "outputFingerprint": "400f8d3abc8ddd32a9450b6a459c8bc9bb7a0f1a43780a2b100c894a73d0b3fc",
+    "updatedAt": "2026-09-21T02:57:02.206Z",
+    "ruleCount": 2339,
+    "duplicateCount": 2,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 45,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 45
+        }
+      },
+      {
+        "bucket": "ipcidr",
+        "count": 2290,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 2290
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 4,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 4
+        }
+      }
+    ],
+    "sourceContentFingerprint": "9098a956560d649a75bfb04b87fb9e406c5f50dac62b18071398dd06aa807c80",
+    "warningCount": 0,
+    "dnsRuleCount": 49,
+    "asnExpiresAt": 1790045822118
+  },
+  "artifacts": [
+    {
+      "bucket": "ipcidr",
+      "path": "Sing-Box/OpenAI/ip-ranges.srs",
+      "sha256": "8b581ac49e65e6e747dfe8552c48eec9eec66a6e7803e69d022e3cdf62523e65"
+    },
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/OpenAI/routing.srs",
+      "sha256": "c058b0d1bee2bf28603eb6b81c639920b1a4284ad9b498df87f3f20881fe000e"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/OpenAI/dns-domains.srs",
+      "sha256": "c058b0d1bee2bf28603eb6b81c639920b1a4284ad9b498df87f3f20881fe000e"
+    }
+  ]
+}
