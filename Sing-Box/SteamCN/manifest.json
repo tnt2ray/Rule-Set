@@ -1,0 +1,39 @@
+{
+  "protocol": "1",
+  "jobId": "0f79ce8b4f4d69e09bd693ad1810ce44736e2ba67c092f3784535ad5bef58e82",
+  "target": "sing-box",
+  "outputName": "SteamCN",
+  "manifest": {
+    "outputFingerprint": "c1f6c31fedfa271fa900396531bbb34796f2f12a3375df7b0448135cb6d2701d",
+    "updatedAt": "2026-09-21T02:57:26.049Z",
+    "ruleCount": 17,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 17,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 17
+        }
+      }
+    ],
+    "sourceContentFingerprint": "a544437a19a230ea404edc145246720dd591ceb4634916f5ffdebaf0fdd77159",
+    "warningCount": 0,
+    "dnsRuleCount": 17
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/SteamCN/routing.srs",
+      "sha256": "d39e1720e141216438c8accd2eeb51c44b7d14fd66e4763bc2d7c2190602e302"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/SteamCN/dns-domains.srs",
+      "sha256": "d39e1720e141216438c8accd2eeb51c44b7d14fd66e4763bc2d7c2190602e302"
+    }
+  ]
+}
