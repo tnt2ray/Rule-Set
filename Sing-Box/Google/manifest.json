@@ -1,11 +1,11 @@
 {
   "protocol": "1",
-  "jobId": "78bc629a7a9b1ee9a32ed4f687424ec4de2b149af53ebab61a16e5322eca92d6",
+  "jobId": "f5efb21f3f7d49d6041eebd491bba1406d0f5919d11b2b1d3d99a2b31360c587",
   "target": "sing-box",
   "outputName": "Google",
   "manifest": {
     "outputFingerprint": "fcd6fb7979e88bdd9db812bdd00399b143d2b29824fbabdc79fc39e00a05417f",
-    "updatedAt": "2026-09-21T02:57:05.577Z",
+    "updatedAt": "2026-09-21T03:00:37.076Z",
     "ruleCount": 701,
     "duplicateCount": 0,
     "buckets": [
