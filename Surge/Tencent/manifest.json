@@ -1,0 +1,43 @@
+{
+  "protocol": "1",
+  "jobId": "a316dc1b068683422fdf483b0fd5b59a8cd7eb4ef70b2c6c34a29443ea943a64",
+  "target": "surge",
+  "outputName": "Tencent",
+  "manifest": {
+    "outputFingerprint": "d9bcaee9638b3d9c7db028de71923fc278edaa774d959b5dde68133d945b8658",
+    "updatedAt": "2026-09-21T02:56:34.174Z",
+    "ruleCount": 348,
+    "duplicateCount": 3,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 45,
+        "targets": [
+          "surge"
+        ],
+        "targetCounts": {
+          "surge": 45
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 303,
+        "targets": [
+          "surge"
+        ],
+        "targetCounts": {
+          "surge": 303
+        }
+      }
+    ],
+    "sourceContentFingerprint": "5d25206cd4d8bdfd354258576c7902f3e0ea819168d9d88dd1415e7afa6d97a2",
+    "warningCount": 0
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Surge/Tencent/routing.list",
+      "sha256": "f8d4b3a64d65bd1d7194ef2a5647a1bb5c3e7f94d2a6aded0e87e3be707bda6d"
+    }
+  ]
+}
