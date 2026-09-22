@@ -5,29 +5,29 @@
   "outputName": "Advertising_Domain",
   "manifest": {
     "outputFingerprint": "f5fb313c58ff7a420a1e80b1d1f74a5f72fb635eb11acf81372459edcc23d363",
-    "updatedAt": "2026-09-21T05:03:48.854Z",
-    "ruleCount": 283435,
+    "updatedAt": "2026-09-22T05:06:03.720Z",
+    "ruleCount": 284128,
     "duplicateCount": 0,
     "buckets": [
       {
         "bucket": "domain",
-        "count": 283435,
+        "count": 284128,
         "targets": [
           "sing-box"
         ],
         "targetCounts": {
-          "sing-box": 283435
+          "sing-box": 284128
         }
       }
     ],
-    "sourceContentFingerprint": "21019b61a9c6e7b7e0a46ffed342044f3b251cdbc6cd030fd6e9435936e96002",
+    "sourceContentFingerprint": "7e11f2b9d518583e4d968309b1d944b16b5bc148b8b731ac1f7cbf81491cd580",
     "warningCount": 0
   },
   "artifacts": [
     {
       "bucket": "domain",
       "path": "Sing-Box/Advertising_Domain/domains.srs",
-      "sha256": "e5e21f74b581ee5273a10970266b9d1be68aa9ba9e114d26b9f9efdf5f1b1cf6"
+      "sha256": "4319ccb8bce149cd601b7a4e3ee49e343fb3f323f7f5c3228912da93a6d75598"
     }
   ]
 }
