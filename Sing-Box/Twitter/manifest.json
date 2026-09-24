@@ -1,11 +1,11 @@
 {
-  "protocol": "1",
-  "jobId": "e29ac1f1a473c59cbfdb9a5e1ecb03eafc44d2e0544607cb7df62107f167f884",
+  "protocol": "2",
+  "jobId": "b40e899ee4afda78ec46627f53ab905a0c4413dcd99b468438a516a40bad5bdf",
   "target": "sing-box",
   "outputName": "Twitter",
   "manifest": {
     "outputFingerprint": "b5278215466b498debb02e74f57799b715b4198888482c027855cf0f438187a7",
-    "updatedAt": "2026-09-21T05:04:10.471Z",
+    "updatedAt": "2026-09-24T10:16:35.897Z",
     "ruleCount": 33,
     "duplicateCount": 0,
     "buckets": [
