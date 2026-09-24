@@ -1,11 +1,11 @@
 {
-  "protocol": "1",
-  "jobId": "fb81fbcde564d00725c8b4abec73b41c94feb5f07393d76d846a2d38e675c0ad",
+  "protocol": "2",
+  "jobId": "61b23528d0c1e7254370b9c5d9f1ed04f9fa28ab52e17366f26a7232bc88c424",
   "target": "sing-box",
   "outputName": "Bing",
   "manifest": {
     "outputFingerprint": "529496521086f8fc50dcf136fee6665c0d48ae21cfc486aa447b4f7708b11f72",
-    "updatedAt": "2026-09-21T05:04:13.992Z",
+    "updatedAt": "2026-09-24T10:16:40.183Z",
     "ruleCount": 9,
     "duplicateCount": 0,
     "buckets": [
