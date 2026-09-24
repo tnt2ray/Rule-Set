@@ -1,11 +1,11 @@
 {
-  "protocol": "1",
-  "jobId": "81779d1ace890bb1016c538beebcc1e64d45f4b526c015fb63a39e0be8ba702c",
+  "protocol": "2",
+  "jobId": "5f223894162ae99799a776e2dfb1dac8ed5e75cc46d1e8512a41cb0d288ccf67",
   "target": "surge",
   "outputName": "REJECT",
   "manifest": {
     "outputFingerprint": "b1437dd1d72d94e9e60de09c4ef03ad4ae6d9ee9d3bb76096df936d9d6cea778",
-    "updatedAt": "2026-09-22T05:05:45.899Z",
+    "updatedAt": "2026-09-24T10:15:53.274Z",
     "ruleCount": 782,
     "duplicateCount": 0,
     "buckets": [
@@ -20,7 +20,7 @@
         }
       }
     ],
-    "sourceContentFingerprint": "1b20f7311ad1a562627fc8caddcbfd1f8fd27f997c2eacaf4d36f33c4753414f",
+    "sourceContentFingerprint": "d08b578f7e2d22585eb013fabc8ee78afd3ccbfb8fb86c6a44eae39e3432a550",
     "warningCount": 0
   },
   "artifacts": [
