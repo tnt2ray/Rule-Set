@@ -1,33 +1,33 @@
 {
-  "protocol": "1",
-  "jobId": "d032ba96921ffa5cd3e6bfe09663393ec911f269c7f6063ceb304a8b4b69a3c8",
+  "protocol": "2",
+  "jobId": "f6dea13d95839d1dbcf9d354c479909635ddc6146cd7b1dcfa43419022ad8067",
   "target": "sing-box",
   "outputName": "Advertising_Domain",
   "manifest": {
     "outputFingerprint": "f5fb313c58ff7a420a1e80b1d1f74a5f72fb635eb11acf81372459edcc23d363",
-    "updatedAt": "2026-09-22T05:06:03.720Z",
-    "ruleCount": 284128,
+    "updatedAt": "2026-09-24T10:16:11.071Z",
+    "ruleCount": 284825,
     "duplicateCount": 0,
     "buckets": [
       {
         "bucket": "domain",
-        "count": 284128,
+        "count": 284825,
         "targets": [
           "sing-box"
         ],
         "targetCounts": {
-          "sing-box": 284128
+          "sing-box": 284825
         }
       }
     ],
-    "sourceContentFingerprint": "7e11f2b9d518583e4d968309b1d944b16b5bc148b8b731ac1f7cbf81491cd580",
+    "sourceContentFingerprint": "9485c20b43e599d5b044917a58c1a91bb56cce29ace727fee3d33ab4a6d1d931",
     "warningCount": 0
   },
   "artifacts": [
     {
       "bucket": "domain",
       "path": "Sing-Box/Advertising_Domain/domains.srs",
-      "sha256": "4319ccb8bce149cd601b7a4e3ee49e343fb3f323f7f5c3228912da93a6d75598"
+      "sha256": "4112d62a0d395a39488f8aef45676b5b0227c8f8b9759b4231dca398d3f742aa"
     }
   ]
 }
