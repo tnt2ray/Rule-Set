@@ -1,11 +1,11 @@
 {
-  "protocol": "1",
-  "jobId": "fdc1d3963023f28365056e8d59d85ebbe47ea1d3dea4190da912b2d1ea50f046",
+  "protocol": "2",
+  "jobId": "7a3b763d331ffb0b2fff3b41d789349364e40bacfdbadf2f9e583a91bc687487",
   "target": "sing-box",
   "outputName": "Steam",
   "manifest": {
     "outputFingerprint": "c31cec611af2604f42888a33e39085cb9fb1f6bb0586e74ee11ab92a2e270250",
-    "updatedAt": "2026-09-21T05:04:33.485Z",
+    "updatedAt": "2026-09-24T10:17:03.247Z",
     "ruleCount": 54,
     "duplicateCount": 0,
     "buckets": [
