@@ -1,11 +1,11 @@
 {
-  "protocol": "1",
-  "jobId": "d4ba9c05bdb6a6114402ed3ed2f400d5ebfe0d78cb1ef0212bb23f49d4950770",
+  "protocol": "2",
+  "jobId": "7232399ff052e60235739475190845d2ceaa6aad38da1e554a20ae40a25746ee",
   "target": "surge",
   "outputName": "Tencent",
   "manifest": {
     "outputFingerprint": "d9bcaee9638b3d9c7db028de71923fc278edaa774d959b5dde68133d945b8658",
-    "updatedAt": "2026-09-21T05:03:35.680Z",
+    "updatedAt": "2026-09-24T10:15:57.736Z",
     "ruleCount": 348,
     "duplicateCount": 3,
     "buckets": [
