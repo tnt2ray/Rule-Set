@@ -11,8 +11,8 @@ import { compileActionRuleSet, createActionAsnResolver, actionsArtifactDirectory
 
 // Keep this version aligned with src/vendor/singbox. The checksum is the official
 // release asset's SHA-256 digest, recorded from GitHub's SagerNet/sing-box API.
-const SING_BOX_VERSION = "1.15.0-alpha.6";
-const SING_BOX_SHA256 = "e19c5e3961ae707d762dc3e6236186c33f0aaf91130567078e1b2af148cda0ae";
+const SING_BOX_VERSION = "1.15.0-alpha.7";
+const SING_BOX_SHA256 = "0878b243c590a5df15f0de0638756e43f56a5aadb4184652631d2806c8af0273";
 const ARCHIVE_NAME = `sing-box-${SING_BOX_VERSION}-linux-amd64.tar.gz`;
 const ARCHIVE_URL = `https://github.com/SagerNet/sing-box/releases/download/v${SING_BOX_VERSION}/${ARCHIVE_NAME}`;
 const SOURCE_LIMIT = 16 * 1024 * 1024;
