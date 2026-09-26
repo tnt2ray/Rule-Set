@@ -5,7 +5,7 @@
   "outputName": "Telegram",
   "manifest": {
     "outputFingerprint": "d8340094ff464b343e7deea0f58ae659670d87ebede0ebc428520155ebedef39",
-    "updatedAt": "2026-09-25T10:20:49.017Z",
+    "updatedAt": "2026-09-26T10:21:39.433Z",
     "ruleCount": 81,
     "duplicateCount": 2,
     "buckets": [
@@ -43,7 +43,7 @@
     "sourceContentFingerprint": "937bab758e416ff8b694910aaa067b40fdc0cd0ef8a0a336655cc04bf018d758",
     "warningCount": 0,
     "dnsRuleCount": 25,
-    "asnExpiresAt": 1790418048295
+    "asnExpiresAt": 1790504498945
   },
   "artifacts": [
     {
