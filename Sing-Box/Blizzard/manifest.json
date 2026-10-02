@@ -1,0 +1,49 @@
+{
+  "protocol": "2",
+  "jobId": "16141953a4500b232f42b271ccd28bd1a7a6a5ad73044576e3531b4ff609ae27",
+  "target": "sing-box",
+  "outputName": "Blizzard",
+  "manifest": {
+    "outputFingerprint": "c64d4c77bf2298661dcec16030c5f65da217f37121ed8badc272a1c2434a4ec6",
+    "updatedAt": "2026-10-02T15:22:29.754Z",
+    "ruleCount": 62,
+    "duplicateCount": 0,
+    "buckets": [
+      {
+        "bucket": "domain",
+        "count": 39,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 39
+        }
+      },
+      {
+        "bucket": "classical",
+        "count": 23,
+        "targets": [
+          "sing-box"
+        ],
+        "targetCounts": {
+          "sing-box": 23
+        }
+      }
+    ],
+    "sourceContentFingerprint": "01ad7205f8f9bf9119bee14b0a9fb781ecf822b9404cddb4d4df144bf38aee91",
+    "warningCount": 0,
+    "dnsRuleCount": 39
+  },
+  "artifacts": [
+    {
+      "bucket": "combined",
+      "path": "Sing-Box/Blizzard/routing.srs",
+      "sha256": "a941fbd85ebb3745f0a23f2598421172dcee9c408cd94e32df3dbbb67d9c3af2"
+    },
+    {
+      "bucket": "dns",
+      "path": "Sing-Box/Blizzard/dns-domains.srs",
+      "sha256": "c67059739b130818440297302318c8e1033b4af75465ba41203159bc2407d06e"
+    }
+  ]
+}
