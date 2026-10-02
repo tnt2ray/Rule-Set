@@ -1,49 +1,49 @@
 {
   "protocol": "2",
-  "jobId": "16141953a4500b232f42b271ccd28bd1a7a6a5ad73044576e3531b4ff609ae27",
+  "jobId": "1bd5a26c63dcce68e94f5db772481beadb8d993e2b8fd45805434c4f70551242",
   "target": "sing-box",
   "outputName": "Blizzard",
   "manifest": {
-    "outputFingerprint": "c64d4c77bf2298661dcec16030c5f65da217f37121ed8badc272a1c2434a4ec6",
-    "updatedAt": "2026-10-02T15:22:29.754Z",
-    "ruleCount": 62,
+    "outputFingerprint": "583fe25b89cca796003ecf31cf8df5693ce6c62939c92eb2330c52257fa898a9",
+    "updatedAt": "2026-10-02T15:23:11.121Z",
+    "ruleCount": 208,
     "duplicateCount": 0,
     "buckets": [
       {
         "bucket": "domain",
-        "count": 39,
+        "count": 157,
         "targets": [
           "sing-box"
         ],
         "targetCounts": {
-          "sing-box": 39
+          "sing-box": 157
         }
       },
       {
         "bucket": "classical",
-        "count": 23,
+        "count": 51,
         "targets": [
           "sing-box"
         ],
         "targetCounts": {
-          "sing-box": 23
+          "sing-box": 51
         }
       }
     ],
-    "sourceContentFingerprint": "01ad7205f8f9bf9119bee14b0a9fb781ecf822b9404cddb4d4df144bf38aee91",
+    "sourceContentFingerprint": "f6b58ae4b47aac93e6e09eea5ed099780209a87cfc5f487d48d3472ea8cc884f",
     "warningCount": 0,
-    "dnsRuleCount": 39
+    "dnsRuleCount": 157
   },
   "artifacts": [
     {
       "bucket": "combined",
       "path": "Sing-Box/Blizzard/routing.srs",
-      "sha256": "a941fbd85ebb3745f0a23f2598421172dcee9c408cd94e32df3dbbb67d9c3af2"
+      "sha256": "1a1abe393d52d315361e79fe5366195f4747f054fdcae4087894960832f3837c"
     },
     {
       "bucket": "dns",
       "path": "Sing-Box/Blizzard/dns-domains.srs",
-      "sha256": "c67059739b130818440297302318c8e1033b4af75465ba41203159bc2407d06e"
+      "sha256": "dbd830a5b8a46d91ba60fccf7a1cca096927a9dbaccdd05ac893a6c25366e4e4"
     }
   ]
 }
