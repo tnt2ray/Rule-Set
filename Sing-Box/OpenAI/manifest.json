@@ -5,8 +5,8 @@
   "outputName": "OpenAI",
   "manifest": {
     "outputFingerprint": "400f8d3abc8ddd32a9450b6a459c8bc9bb7a0f1a43780a2b100c894a73d0b3fc",
-    "updatedAt": "2026-10-05T11:05:52.313Z",
-    "ruleCount": 2247,
+    "updatedAt": "2026-10-06T11:11:10.851Z",
+    "ruleCount": 2512,
     "duplicateCount": 2,
     "buckets": [
       {
@@ -21,12 +21,12 @@
       },
       {
         "bucket": "ipcidr",
-        "count": 2198,
+        "count": 2463,
         "targets": [
           "sing-box"
         ],
         "targetCounts": {
-          "sing-box": 2198
+          "sing-box": 2463
         }
       },
       {
@@ -43,13 +43,13 @@
     "sourceContentFingerprint": "9098a956560d649a75bfb04b87fb9e406c5f50dac62b18071398dd06aa807c80",
     "warningCount": 0,
     "dnsRuleCount": 49,
-    "asnExpiresAt": 1791284752167
+    "asnExpiresAt": 1791371470736
   },
   "artifacts": [
     {
       "bucket": "ipcidr",
       "path": "Sing-Box/OpenAI/ip-ranges.srs",
-      "sha256": "0b178ce5a971863d3ca3974117c2d793bf937d524526470dba42c1a1aeaff974"
+      "sha256": "9e95c9f6fac743d1365bebac1a68159410b437bd86853875caf8c2371ceecaf5"
     },
     {
       "bucket": "combined",
