@@ -5,7 +5,7 @@
   "outputName": "Blizzard",
   "manifest": {
     "outputFingerprint": "583fe25b89cca796003ecf31cf8df5693ce6c62939c92eb2330c52257fa898a9",
-    "updatedAt": "2026-10-04T11:01:25.254Z",
+    "updatedAt": "2026-10-06T11:11:29.389Z",
     "ruleCount": 208,
     "duplicateCount": 0,
     "buckets": [
@@ -30,7 +30,7 @@
         }
       }
     ],
-    "sourceContentFingerprint": "75925428db91f1567956114335abc14bfca95ef15e1a60467f3857df5bd3b3e0",
+    "sourceContentFingerprint": "fd702463119c20659fa467ed5536a59695b8fe08c0153308e5c7a1b7f29bb63d",
     "warningCount": 0,
     "dnsRuleCount": 157
   },
