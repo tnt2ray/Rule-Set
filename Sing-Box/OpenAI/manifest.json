@@ -1,22 +1,22 @@
 {
   "protocol": "2",
-  "jobId": "fd30a447ae7c0cf4e95ce825dfc7da5344885ab963f376c4edc465679d24c102",
+  "jobId": "773d392286d7c01a9a33f2a4251639265931fe24e236cbffab51f078f5a0d655",
   "target": "sing-box",
   "outputName": "OpenAI",
   "manifest": {
-    "outputFingerprint": "400f8d3abc8ddd32a9450b6a459c8bc9bb7a0f1a43780a2b100c894a73d0b3fc",
-    "updatedAt": "2026-10-07T11:15:49.700Z",
-    "ruleCount": 2326,
-    "duplicateCount": 2,
+    "outputFingerprint": "7ab74b730fbfa5aabe2dd2ff506f69b0c471d7c404ccbfb94bdf3c2f9825047e",
+    "updatedAt": "2026-10-07T13:23:41.376Z",
+    "ruleCount": 2325,
+    "duplicateCount": 0,
     "buckets": [
       {
         "bucket": "domain",
-        "count": 45,
+        "count": 44,
         "targets": [
           "sing-box"
         ],
         "targetCounts": {
-          "sing-box": 45
+          "sing-box": 44
         }
       },
       {
@@ -40,10 +40,10 @@
         }
       }
     ],
-    "sourceContentFingerprint": "9098a956560d649a75bfb04b87fb9e406c5f50dac62b18071398dd06aa807c80",
+    "sourceContentFingerprint": "7d5177ebdad4f01b3f786ed3f11bbb065d4fa3c6d550feca2f21940e8cfba365",
     "warningCount": 0,
-    "dnsRuleCount": 49,
-    "asnExpiresAt": 1791458149546
+    "dnsRuleCount": 48,
+    "asnExpiresAt": 1791465821205
   },
   "artifacts": [
     {
@@ -54,12 +54,12 @@
     {
       "bucket": "combined",
       "path": "Sing-Box/OpenAI/routing.srs",
-      "sha256": "c058b0d1bee2bf28603eb6b81c639920b1a4284ad9b498df87f3f20881fe000e"
+      "sha256": "9e927314b69007e7d97b97987b6f2dd34f46312bfdd72642fa68717927bcbf69"
     },
     {
       "bucket": "dns",
       "path": "Sing-Box/OpenAI/dns-domains.srs",
-      "sha256": "c058b0d1bee2bf28603eb6b81c639920b1a4284ad9b498df87f3f20881fe000e"
+      "sha256": "9e927314b69007e7d97b97987b6f2dd34f46312bfdd72642fa68717927bcbf69"
     }
   ]
 }
