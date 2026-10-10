@@ -5,7 +5,7 @@
   "outputName": "Advertising",
   "manifest": {
     "outputFingerprint": "dc00d1afe00c9107ca07d6271a1938b4e736a677c1d6b8725b5ac69117b61bff",
-    "updatedAt": "2026-10-08T11:20:37.384Z",
+    "updatedAt": "2026-10-10T11:30:59.365Z",
     "ruleCount": 767,
     "duplicateCount": 0,
     "buckets": [
@@ -30,7 +30,7 @@
         }
       }
     ],
-    "sourceContentFingerprint": "7b2198443ca36bda3ed191886c469025604ded96aed288166da00ea1418f7a48",
+    "sourceContentFingerprint": "f2240d5258e41dca68d5fbd6cbe1090ef01df10bbf567eaeb2075e802da0db98",
     "warningCount": 0
   },
   "artifacts": [
