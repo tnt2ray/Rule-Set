@@ -5,7 +5,7 @@
   "outputName": "REJECT",
   "manifest": {
     "outputFingerprint": "b1437dd1d72d94e9e60de09c4ef03ad4ae6d9ee9d3bb76096df936d9d6cea778",
-    "updatedAt": "2026-10-08T11:20:31.767Z",
+    "updatedAt": "2026-10-10T11:30:53.805Z",
     "ruleCount": 782,
     "duplicateCount": 0,
     "buckets": [
@@ -20,7 +20,7 @@
         }
       }
     ],
-    "sourceContentFingerprint": "949b7f4c23218abb3925e4209d78d82922e259c29e274ce215eaee287d374ef9",
+    "sourceContentFingerprint": "838fec5056c616068646c425f52e523e796ef36957a4da867f358d5889a51f40",
     "warningCount": 0
   },
   "artifacts": [
